@@ -34,20 +34,21 @@ void setup() {
 
 void draw() {
 
-  ////// util
-  // Start/stop recording frames if 'r'
-  recorder.ready();
-  // Check for button presses
-  //updateControlsFromKeyboard();
-
-  
   // Kinect
-  // Draw the Generic depth image
+  // Draw depth image
   kinect.drawDepthImage(); 
 
-  // Draw the greyscale image that's based on the depthArray
+  // Draw depthArray image in greyscale
   image(kinect.getRawDepthImage(), 640, 0);
 
-  // Show the calibration info (angle and distance)
+  // Show angle and distance
   kinect.displayDistanceAndAngle();
+
+  ////////////////////////////////////////////////////////////
+  // frame recorder
+  //    MUST BE AT THE BOTTOM OF THE DRAW LOOP
+  //    'r' = Start/stop recording
+  recorder.ready();
+  // Check for button presses
+  // updateControlsFromKeyboard();
 }
