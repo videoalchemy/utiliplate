@@ -60,14 +60,6 @@ void keyPressed() {
       println("keyCode == UP");
     } else if (keyCode == DOWN) {
       println("keyCode == DOWN");
-    } else if (key == 'a') {
-      kinect.minDepth = constrain(kinect.minDepth+10, 0, kinect.maxDepth);
-    } else if (key == 's') {
-      kinect.minDepth = constrain(kinect.minDepth-10, 0, kinect.maxDepth);
-    } else if (key == 'z') {
-      kinect.maxDepth = constrain(kinect.maxDepth+10, kinect.minDepth, 2047);
-    } else if (key =='x') {
-      kinect.maxDepth = constrain(kinect.maxDepth-10, kinect.minDepth, 2047);
     }
   }
 
